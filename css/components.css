@@ -1,0 +1,30 @@
+.menu-height {
+    height: 15vh;
+}
+
+.logo-menu {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%
+}
+
+.logo-footer {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%
+}
+
+.font-footer-direitos {
+    font-size: 15px;
+}
+
+.img-quem-somos{
+    height: 100%;
+    width: 103%;
+}
+
+.img-quem-somos2 {
+    height: 100%;
+    width: 103%;
+}
+

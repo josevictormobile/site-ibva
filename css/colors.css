@@ -1,0 +1,28 @@
+﻿.gree-100 {
+    background-color: rgb(209,231,221);
+}
+.gree-150 {
+    background-color: rgb(163,207,187);
+}
+.green-200 {
+    background-color: rgb(117, 183, 152);
+}
+.green-500{
+    background-color: rgb(25, 135, 84);
+}
+.text-green-500 {
+    color: rgb(25, 135, 84);
+}
+.orange-200 {
+    background-color: rgb(219, 152, 91);
+}
+.orange-300 {
+    background-color: rgb(170, 100, 38);
+}
+.blue-800 {
+    background-color: rgb(35, 52, 68);
+}
+.transparent-1 {
+    background-color: rgba(25, 135, 84,0.1);
+}
+

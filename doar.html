@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doar Agora</title>
+
+    <link rel="stylesheet" href="./css/site.css"/>
+    <link rel="stylesheet" href="./css/colors.css"/>
+    <link rel="stylesheet" href="./css/components.css"/>
+    <link rel="stylesheet" href="./css/index.css"/>
+    <link rel="stylesheet" href="./css/doar-agora.css"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+</head>
+<body>
+    <header>
+        <nav class="container-fluid fixed-top navbar navbar-expand-lg navbar-light transparent-1 menu-height">
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index"><img class="logo-menu m-3" src="./img/logo-teste.png" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="row collapse navbar-collapse" id="navbarNav">
+                <ul class="col-8 navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./quem_somos.html">Quem Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./nosso_trabalho.html">Nosso Trabalho</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contato.html">Contato</a>
+                    </li>
+                </ul>
+                <div class="col-4 d-flex align-items-center">
+                    <a class="btn btn-success mr-5" href="./doar.html">Doar Agora</a>
+                    <ul class="list-unstyled d-flex float-right">
+                        <li class="mr-3">
+                            <a class="text-dark" href="">
+                                <i class="fab fa-instagram fa-lg"></i>
+                            </a>
+                        </li>
+                        <li class="mr-3">
+                            <i class="fab fa-whatsapp fa-lg mr-1"></i>
+                        </li>
+                        <li class="mr-3">
+                            <i class="fas fa-envelope"></i>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt mr-1"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+    <div class="menu-height green-500"></div>
+
+    <style>
+        .transparent-1 {
+            background-color: rgb(25, 135, 84);
+        }
+        #copy-icon{
+            color: rgb(25, 135, 84);
+        }
+        #copy-button{
+            border-style: none;
+            background-color: white;
+        }
+    </style>
+    <div class="">
+        <section id="contribua" class="container-fluid green-100 text-green-500 pt-5 pb-5">
+            <div class="row justify-content-center align-items-center">
+                <h3>CONTRIBUA FINANCEIRAMENTE COM NOSSO TRABALHO</h3>
+            </div>
+            <div class="row justify-content-center align-items-center mt-3">
+                <h4>Formas de doar</h4>
+            </div>
+            <div class="row justify-content-center align-items-center p-3">
+                <div class="bloco-doacao col-lg-5 m-3">
+                    <div class="row justify-content-center align-items-center mt-5">
+                        <h5>Chave PIX</h5>
+                    </div>
+                    <div class="row justify-content-center align-items-center mt-1">
+                        <h5 id="pix">1234567894654612321</h5><button id="copy-button" class="mb-2 ml-1" onclick="copyClippboard()"><i id="copy-icon" class="far fa-lg fa-copy"></i></button>
+                    </div>
+                    <div class="row justify-content-center align-items-center mt-1">
+                        <img src="https://mcmpovos.org/wp-content/uploads/2022/04/QR-CODE-17000-1-2-150x150.png.webp" />
+                    </div>
+                    <div class="row justify-content-center align-items-center mt-3">
+                        <h5>Leia o QR code acima com seu aplicativo bancário</h5>
+                    </div>
+                </div>
+                <div class="bloco-doacao col-lg-5 m-3">
+                    <div class="row justify-content-center align-items-center mt-5">
+                        <h5>Depósito ou transferência bancária</h5>
+                    </div>
+                    <div class="row justify-content-center align-items-center mt-1">
+                        <img src="https://mcmpovos.org/wp-content/uploads/2020/09/Grupo-9.png.webp" />
+                    </div>
+                    <div class="row justify-content-center align-items-center mt-1">
+                        <h5>AG. 2738-3</h5>
+                    </div>
+                    <div class="row justify-content-center align-items-center mt-1">
+                        <h5>CC 20000-X</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function copyClippboard() {
+            var elem = document.getElementById("pix");
+            var text = elem.innerText;
+    
+            navigator.clipboard.writeText(text).then(
+                Swal.fire({
+                    title: "Copiado!",
+                    text: "Chave PIX copiada com sucesso!",
+                    icon: "success"
+                })
+            );
+        }
+    </script>
+
+    <footer class="border-top footer green-500">
+        <div class="row justify-content-between align-items-center m-4 p-4">
+            <div class="col-lg-2">
+                <div class="d-flex justify-content-center align-items-center m-3">
+                    <img class="logo-footer" src="./img/logo-teste.png" />
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <span>"Os que confiam no SENHOR serão como o monte de Sião, que não se abala, mas permanece para sempre." (Salmos 125:1)</span>
+            </div>
+            <div class="col-lg-7 mt-3">
+                <ul class="list-unstyled float-right">
+                    <li class="mr-3">
+                        <a class="text-light" href="">
+                            <i class="fab fa-instagram fa-lg text-light"></i>
+                            <span>@ibvasertao</span>
+                        </a>
+                    </li>
+                    <li class="mr-3">
+                        <i class="fab fa-whatsapp fa-lg mr-1"></i>
+                        <span>(88) 9 9988-7766</span>
+                    </li>
+                    <li class="mr-3">
+                        <i class="fas fa-envelope"></i>
+                        <span>ibvasertao@gmail.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt mr-1"></i>
+                        <span>Rua Moacir Gondim Lóssio, 213 - São José - Juazeiro do Norte - Ceará.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container text-center font-footer-direitos pb-3">
+            &copy; 2023 - IBVA Sertão - Todos os direitos reservados.
+        </div>
+    </footer>
+    <script src="./lib/jquery/dist/jquery.min.js"></script>
+    <script src="./lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/site.js" asp-append-version="true"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script src="./lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="./lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>
